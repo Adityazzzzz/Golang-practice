@@ -5,3 +5,7 @@ Golang:
     - performace efficiency
     - static typing and compilation
 
+File:
+    - main.go
+    - to run: `go run <filename>`
+    
