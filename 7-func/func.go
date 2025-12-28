@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
 basic:
 	func add(a int, b int) int {
