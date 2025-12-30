@@ -17,8 +17,10 @@ type order struct {
 }
 
 // method to change any value which is defined in struct
-func (o *order) changeStatus(status string){
+func (o *order) changeStatus(status string)*order{
 	o.status = status
+
+	return o
 }
 
 func main(){
