@@ -26,7 +26,7 @@ func (p payment) handlePayments(amount float32) {
 */
 
 	// instead we can create a single way
-	p.gateway1.pay(amount)
+	p.gateway.pay(amount)
 }
 
 
