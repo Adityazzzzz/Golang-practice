@@ -1,10 +1,8 @@
 package main
-
 import (
 	"fmt"
 	"time"
 )
-
 type customer struct {
 	name  string
 	phone string
@@ -18,6 +16,11 @@ type order struct {
 	customer
 }
 
+// method to change any value which is defined in struct
+func (o *order) changeStatus(status string){
+	o.status = status
+}
+
 func main(){
 	myorder := order{
 		id:"1",
@@ -25,6 +28,9 @@ func main(){
 		status: "received",
 	}
 	myorder.createdAt = time.Now()
+
+	myorder.changeStatus("confirmed")//imp
+
 	
 	fmt.Println(myorder)
 	fmt.Println(myorder.amount)
