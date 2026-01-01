@@ -13,7 +13,12 @@ Tiny mental model:
 // Go-routines : Independent and Parallel thread runs in background
 
 
-
+/*
+	WaitGroups is three steps: 	
+	.Add(), 
+	.Wait(), 
+	.Done()
+*/
 import (
 	"fmt"
 	"sync"
