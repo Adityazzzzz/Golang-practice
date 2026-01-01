@@ -9,23 +9,27 @@ Tiny mental model:
 	Think of a goroutine as a super-light background task managed by Go’s runtime, not by the operating system, which makes concurrency simple and efficient.
 */
 
+
+// Go-routines : Independent and Parallel thread runs in background
+
+
+
 import (
 	"fmt"
 	"sync"
 )
 
-func task(id int, w *sync.WaitGroup) {
+func task(id int, w *sync.WaitGroup){
 	defer w.Done()
 	fmt.Println("doing task", id)
 }
 
 func main() {
-	var wg sync.WaitGroup
+	var weightGrp sync.WaitGroup  // ***Imp : WaitGroup
 
-	for i := 0; i <= 10; i++ {
-		wg.Add(1)
-		go task(i, &wg)
+	for i:=0;i<=10;i++ {
+		weightGrp.Add(1)
+		go task(i,&weightGrp) // ***Imp : Just add 'GO' 
 	}
-
-	wg.Wait()
+	weightGrp.Wait()
 }

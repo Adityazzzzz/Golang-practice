@@ -20,11 +20,11 @@ Tiny example:
 // polymorphism = generics
 
 
-// func printSlice(arr[]int){
-// 	for _,it:=range arr{
-// 		fmt.Println(it)
-// 	}
-// }
+func printSlice0(arr[]int){
+	for _,it:=range arr{
+		fmt.Println(it)
+	}
+}
 
 func printSlice[T any](arr[]T){
 	for _,it:=range arr{
